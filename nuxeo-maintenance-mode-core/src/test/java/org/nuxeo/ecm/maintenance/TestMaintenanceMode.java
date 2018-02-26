@@ -1,3 +1,21 @@
+/*
+ * Copyright 2018 The Apache Software Foundation.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Contributors:
+ *     Damon Brown
+ */
 package org.nuxeo.ecm.maintenance;
 
 import static org.junit.Assert.assertEquals;
@@ -29,6 +47,11 @@ import org.nuxeo.runtime.test.runner.Deploy;
 import org.nuxeo.runtime.test.runner.Features;
 import org.nuxeo.runtime.test.runner.FeaturesRunner;
 
+/**
+ * Test cases for all possible states of maintenance mode.
+ * 
+ * @since 9.10
+ */
 @RunWith(FeaturesRunner.class)
 @Features(AutomationFeature.class)
 @RepositoryConfig(init = NoopRepositoryInit.class, cleanup = Granularity.METHOD)
@@ -73,7 +96,7 @@ public class TestMaintenanceMode {
     probe = Framework.getService(ProbeManager.class).getProbeInfo(MaintenanceComponent.MAINTENANCE_PROBE);
     assertTrue(probe.isInError());
 
-    // Modify state
+    // Reset state
     params.clear();
     params.put("enabled", false);
     automationService.run(ctx, MaintenanceModeOp.ID, params);
@@ -109,7 +132,7 @@ public class TestMaintenanceMode {
     probe = Framework.getService(ProbeManager.class).getProbeInfo(MaintenanceComponent.MAINTENANCE_PROBE);
     assertTrue(probe.isInError());
 
-    // Modify state
+    // Reset state
     params.clear();
     params.put("enabled", false);
     automationService.run(ctx, MaintenanceModeOp.ID, params);

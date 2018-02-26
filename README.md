@@ -18,8 +18,6 @@ Build requires the following software:
 
 ```
 mvn clean install
-# or 
-mvn clean install -DskipTests
 ```
 
 # Deploy

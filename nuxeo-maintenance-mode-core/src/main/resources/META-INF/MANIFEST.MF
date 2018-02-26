@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 1
+Bundle-Name: Nuxeo Maintenance Mode Support
+Bundle-SymbolicName: org.nuxeo.ecm.maintenance-mode;singleton=true
+Bundle-Version: 1.0.0
+Nuxeo-Component: OSGI-INF/maintenancemode-service.xml,
+ OSGI-INF/maintenancemode-operation-contrib.xml,
+ OSGI-INF/maintenancemode-management-contrib.xml

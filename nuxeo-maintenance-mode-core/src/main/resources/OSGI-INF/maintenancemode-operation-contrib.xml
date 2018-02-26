@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.maintenance.operation.maintenancemode" version="1.0">
+  <require>org.nuxeo.ecm.maintenance.MaintenanceComponent</require>
+
+  <extension point="operations" target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
+    <operation class="org.nuxeo.ecm.maintenance.operation.MaintenanceModeOp"/>
+    <operation class="org.nuxeo.ecm.maintenance.operation.MaintenanceStatusOp"/>
+  </extension>
+
+</component>

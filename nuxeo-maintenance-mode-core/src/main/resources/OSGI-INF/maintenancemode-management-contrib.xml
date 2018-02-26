@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.maintenance.managment.contrib">
+  <require>org.nuxeo.ecm.maintenance.MaintenanceComponent</require>
+
+  <extension point="probes" target="org.nuxeo.ecm.core.management.CoreManagementComponent">
+    <probe name="maintenanceStatus" class="org.nuxeo.ecm.maintenance.status.MaintenanceStatusProbe">
+      <label>Maintenance probe</label>
+    </probe>
+  </extension>
+
+  <extension point="healthCheck" target="org.nuxeo.ecm.core.management.CoreManagementComponent">
+    <probe name="maintenanceStatus" enabled="true" />
+  </extension>
+
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.maintenance.MaintenanceComponent" version="1.0">
+  <require>org.nuxeo.ecm.core.repository.RepositoryServiceComponent</require>
+<!--   <require>org.nuxeo.ecm.core.management.CoreManagementComponent</require> -->
+  
+  <implementation class="org.nuxeo.ecm.maintenance.MaintenanceComponent" />
+
+  <service>
+    <provide interface="org.nuxeo.ecm.maintenance.api.MaintenanceAdmin" />
+  </service>
+
+</component>

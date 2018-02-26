@@ -83,8 +83,8 @@ public class MaintenanceComponent extends DefaultComponent implements Maintenanc
 
   @Override
   public MaintenanceStatus setMode(boolean enabled, String message) {
-    MaintenanceStatus status = new MaintenanceStatus(enabled, message);
-    this.status.set(status);
+    MaintenanceStatus newStatus = new MaintenanceStatus(enabled, message);
+    this.status.set(newStatus);
 
     // Force update of probe
     Framework.getService(ProbeManager.class).runProbe(MAINTENANCE_PROBE);
@@ -95,7 +95,7 @@ public class MaintenanceComponent extends DefaultComponent implements Maintenanc
     Event event = ctx.newEvent(MAINTENANCE_PROBE + (enabled ? "Enabled" : "Disabled"));
     eventProducer.fireEvent(event);
 
-    return status;
+    return newStatus;
   }
 
 }

@@ -1,4 +1,4 @@
-[![Nuxeo Version](https://img.shields.io/badge/dynamic/json.svg?label=Nuxeo&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnuxeo-sandbox%2Fnuxeo-maintenance-mode%2Fmaster%2Fnuxeo.json&query=%24.version)](https://www.nuxeo.com) [![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=Sandbox/sandbox_nuxeo-maintenance-mode)](https://qa.nuxeo.org/jenkins/job/Sandbox/job/sandbox_nuxeo-maintenance-mode)
+[![Nuxeo Version](https://img.shields.io/badge/nuxeo-9.10-blue.svg)](https://www.nuxeo.com) [![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=Sandbox/sandbox_nuxeo-maintenance-mode)](https://qa.nuxeo.org/jenkins/job/Sandbox/job/sandbox_nuxeo-maintenance-mode)
 
 # About
 

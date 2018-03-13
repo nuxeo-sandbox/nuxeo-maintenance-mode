@@ -1,3 +1,5 @@
+[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=Sandbox/sandbox_nuxeo-maintenance-mode)](https://qa.nuxeo.org/jenkins/job/Sandbox/sandbox_nuxeo-maintenance-mode)
+
 # About
 
 Maintenance mode adds an additional status probe to the `http://${NUXEO_HOST}/nuxeo/runningstatus`  document.  When maintenance mode is enabled, the `runningstatus` document will return a 500 HTTP response status code with a failed status for the "maintenanceStatus" probe.  The change in status will allow load balancers and other smart web application firewalls not to direct traffic to those servers in maintenance.
